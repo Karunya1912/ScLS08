@@ -1,33 +1,33 @@
-object CaesarCipher {
+object Que1 {
 
   // Function to encrypt a single character with a shift of 1
-  def encryptChar(c: Char): Char = {
-    if (c.isLetter) {
-      val base = if (c.isLower) 'a' else 'A'
-      ((c - base + 1) % 26 + base).toChar
+  def encChar(x: Char): Char = {
+    if (x.isLetter) {
+      val base = if (x.isLower) 'a' else 'A'
+      ((x - base + 1) % 26 + base).toChar
     } else {
-      c
+      x
     }
   }
 
   // Function to decrypt a single character with a shift of 1
-  def decryptChar(c: Char): Char = {
-    if (c.isLetter) {
-      val base = if (c.isLower) 'a' else 'A'
-      ((c - base - 1 + 26) % 26 + base).toChar
+  def decChar(x: Char): Char = {
+    if (x.isLetter) {
+      val base = if (x.isLower) 'a' else 'A'
+      ((x - base - 1 + 26) % 26 + base).toChar
     } else {
-      c
+      x
     }
   }
 
   // Encryption function for the Caesar cipher with a fixed shift of 1
   def encrypt(text: String): String = {
-    text.map(c => encryptChar(c))
+    text.map(x => encChar(x))
   }
 
   // Decryption function for the Caesar cipher with a fixed shift of 1
   def decrypt(text: String): String = {
-    text.map(c => decryptChar(c))
+    text.map(x => decChar(x))
   }
 
   // Cipher function that takes an encryption or decryption function to process data
