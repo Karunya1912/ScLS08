@@ -1,6 +1,6 @@
 object Que1 {
 
-  // Function to encrypt a single character with a shift of 1
+  // Function to encrypt a single character with a shift of 1 I-73 A-65 H-72
   def encChar(x: Char): Char = {
     if (x.isLetter) {
       val base = if (x.isLower) 'a' else 'A'
